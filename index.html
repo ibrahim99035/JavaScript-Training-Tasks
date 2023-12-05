@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/global.css">
+    <link rel="stylesheet" href="CSS/clock.css">
+    <link rel="stylesheet" href="CSS/calculator.css">
+    <link rel="stylesheet" href="CSS/quote.css">
+    <link rel="stylesheet" href="CSS/todo.css">
+    <link rel="stylesheet" href="CSS/memorygame.css">
+    <link rel="stylesheet" href="CSS/wheather.css">
+    <title>Document</title>
+</head>
+<body>
+    <hr> <br>
+        <button onclick="openPopup('EmailValidationPopup')" class="containersButtons">Email Validate</button>
+        <button onclick="openPopup('PasswordValidationPopup')" class="containersButtons">Password Validate</button>
+        <button onclick="openPopup('PhoneValidationPopup')" class="containersButtons">Phone Validate</button>
+        <button onclick="openPopup('URLValidationPopup')" class="containersButtons">URL Validate</button>
+        <button onclick="openPopup('calculatorpopup')" class="containersButtons">Calculator</button>
+        <button onclick="openPopup('quote-container')" class="containersButtons">Quote Generator</button>
+        <button onclick="openPopup('todo-container')" class="containersButtons">To Do List</button>
+        <button onclick="openPopup('clock-container')" class="containersButtons">Digital Clock</button>
+        <button onclick="openPopup('memorygame')" class="containersButtons">Memory Game</button>
+        <button onclick="openPopup('wheather')" class="containersButtons">Wheather App</button>
+    <hr> <br>
+
+    <div id="EmailValidationPopup" class="popup">
+        <form id="emailForm">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" class="vaildationInputs">
+            <button type="button" onclick="validateEmail()" class="validationButton">Validate</button>
+            <p id="emailerror" class="error"></p>
+            <p id="validemail" class="valid"></p>
+        </form>
+        <button onclick="closePopup('EmailValidationPopup')" class="popupclose closwButton" >Close</button>
+    </div>
+    
+    <div id="PasswordValidationPopup" class="popup">
+        <form id="PasswordForm">
+            <label for="pass">Password:</label>
+            <input type="text" id="password" name="password" class="vaildationInputs">
+            <button type="button" onclick="validatePassword()" class="validationButton">Validate</button>
+            <p id="passerror" class="error"></p>
+            <p id="validpass" class="valid"></p>
+        </form>
+        <button onclick="closePopup('PasswordValidationPopup')" class="popupclose closwButton" >Close</button>
+    </div>
+
+    <div id="PhoneValidationPopup" class="popup">
+        <form id="PhoneForm">
+            <label for="phone">Password:</label>
+            <input type="phone" id="phone" name="phone" class="vaildationInputs">
+            <button type="button" onclick="validatePhone()" class="validationButton">Validate</button>
+            <p id="phoneerror" class="error"></p>
+            <p id="validphone" class="valid"></p>
+        </form>
+        <button onclick="closePopup('PhoneValidationPopup')" class="popupclose closwButton" >Close</button>
+    </div>
+
+    <div id="URLValidationPopup" class="popup">
+        <form id="URLForm">
+            <label for="url">Password:</label>
+            <input type="text" id="url" name="url" class="vaildationInputs">
+            <button type="button" onclick="validateURL()" class="validationButton">Validate</button>
+            <p id="urlerror" class="error"></p>
+            <p id="validurl" class="valid"></p>
+        </form>
+        <button onclick="closePopup('URLValidationPopup')" class="popupclose closwButton" >Close</button>
+    </div>
+
+    <div id="calculatorpopup" class="popup">
+        <div id="calculator">
+            <div class="screen" id="display">0</div>
+            <div class="buttons">
+                <button id="seven">7</button>
+                <button id="eight">8</button>
+                <button id="nine">9</button>
+                <button id="division" class="operator">/</button>
+                <button id="four">4</button>
+                <button id="five">5</button>
+                <button id="six">6</button>
+                <button id="multiplication" class="operator">*</button>
+                <button id="one">1</button>
+                <button id="two">2</button>
+                <button id="three">3</button>
+                <button id="substitution" class="operator">-</button>
+                <button id="zero">0</button>
+                <button id="floating">.</button>
+                <button id="result" class="equals">=</button>
+                <button id="addition" class="operator">+</button>
+            </div>   
+        </div>
+        <br>
+        <button onclick="closePopup('calculatorpopup')" class="popupclose closwButton" >Close</button>
+        <button id="clear">Clear</button>
+    </div>
+
+    <div id="quote-container" class="popup">
+        <p>Click the button to generate a random quote.</p>
+        <button onclick="generateRandomQuote()" id="quoteGenerator">Generate Quote</button>
+        <button onclick="copyToClipboard()" style="display: none;" id="copyButton">Copy</button>
+        <br>
+        <code id="quote-text"></code>
+        <br>
+        <br>
+        <div id="share-buttons">
+            <button onclick="shareOnTwitter()" id="twitter">Share on Twitter</button>
+            <button onclick="shareOnFacebook()" id="facebook">Share on Facebook</button>
+        </div>
+        <button onclick="closePopup('quote-container')" class="popupclose closwButton" >Close</button>
+    </div>
+
+    <div id="todo-container" class="popup">
+        <h2>Enhanced ToDo List</h2>
+        <input type="text" id="taskInput" placeholder="New Task">
+        <button onclick="addTask()" class="validationButton">Add</button>
+    
+        <ul id="taskList"></ul>
+    
+        <button onclick="clearAllTasks()">Clear All Tasks</button>
+
+        <button onclick="closePopup('todo-container')" class="popupclose closwButton" >Close</button>
+    </div>
+
+    <div id="clock-container" class="popup">
+        <button onclick="closePopup('clock-container')" class="popupclose closwButton" >x</button>
+        <div id="clock"></div>
+        <div id="date"></div>
+        <button id="formatToggle" onclick="toggleTimeFormat()">Toggle 12/24-hour Format</button>    
+    </div>
+
+    <div id="memorygame" class="popup">
+        <div class="grid-container"></div>
+        <p>Score: <span class="score"></span></p>
+        <div class="actions">
+            <button onclick="restart()">Restart</button>
+        </div>
+        <button onclick="closePopup('memorygame')" class="popupclose closwButton" >Close</button>
+    </div>
+
+    <div id="wheather" class="popup">
+        <h2>Location-based Wheather App</h2>
+        <button class="validationButton" onclick="getLocation()">Get Wheather</button>
+        <div id="weather-container"></div>
+
+        <button onclick="closePopup('wheather')" class="popupclose closwButton" >Close</button>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+    
+    <script src="JS/validations.js"></script>
+    <script src="JS/calculator.js"></script>
+    <script src="JS/quote.js"></script>
+    <script src="JS/todo.js"></script>
+    <script src="JS/clock.js"></script>
+    <script src="JS/memorygame.js"></script>
+    <script src="JS/weather.js"></script>
+</body>
+</html>

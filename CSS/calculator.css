@@ -1,0 +1,42 @@
+#clock {
+    font-size: 3em;
+    color: #333;
+}
+
+#calculator {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+}
+
+.screen {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    background-color: #eee;
+    font-size: 1.5em;
+    height: 60px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+.operator {
+    background-color: #f7941d;
+    color: white;
+}
+
+.equals {
+    background-color: #28a745;
+    color: white;
+}

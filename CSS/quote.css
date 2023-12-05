@@ -1,0 +1,44 @@
+#clear{
+    border-radius: 15px;
+    background-color: rgba(122, 63, 8, 0.767);
+    color: white;
+}
+#clear:hover {
+    background-color: #ddd;
+}
+
+#quoteGenerator, #copyButton{
+    border-radius: 15px;
+    background-color: rgba(14, 110, 110, 0.993);
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+#copyButton{
+    text-align: center;
+    margin: auto;
+}
+
+code{
+    font-family: 'Courier New', monospace;
+    font-size: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid black;
+    border-radius: 5px;
+    overflow-x: auto; 
+    width: 100%;
+}
+
+#facebook{
+    background-color: #1877f2;
+    color: white;
+    border-radius: 15px;
+    margin-bottom: 0.5rem;
+}
+
+#twitter{
+    background-color: #1da1f2;
+    color: white;
+    border-radius: 15px;
+    margin-bottom: 0.5rem;
+}
