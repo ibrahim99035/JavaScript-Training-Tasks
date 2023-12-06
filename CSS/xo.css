@@ -1,0 +1,25 @@
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 0.2px;
+    margin-bottom: 0.5rem;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #333;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cell:hover {
+    background-color: #f0f0f0;
+}
+
+#message{
+    font-weight: bold;
+}
