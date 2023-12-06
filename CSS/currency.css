@@ -1,0 +1,12 @@
+#converter {
+    text-align: center;
+}
+
+#selections{
+    border: solid 1px black;
+    display: flex;
+    width: 60%;
+    margin: auto;
+    padding: 0.25rem;
+    border-radius: 5px;
+}

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="CSS/memorygame.css">
     <link rel="stylesheet" href="CSS/wheather.css">
     <link rel="stylesheet" href="CSS/xo.css">
+    <link rel="stylesheet" href="CSS/currency.css">
     <title>JavaScript Tasks</title>
 </head>
 <body>
@@ -26,6 +27,7 @@
         <button onclick="openPopup('memorygame')" class="containersButtons">Memory Game</button>
         <button onclick="openPopup('xogamecontainer')" class="containersButtons">XO Game</button>
         <button onclick="openPopup('wheather')" class="containersButtons">Wheather App</button>
+        <button onclick="openPopup('converter')" class="containersButtons">Currency Converter</button>
     <hr> <br>
 
     <div id="EmailValidationPopup" class="popup">
@@ -158,6 +160,43 @@
         <button onclick="closePopup('xogamecontainer')" class="popupclose closwButton" >Close</button>
     </div>
 
+    <div id="converter" class="popup">
+        <h2>Currency Converter</h2>
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" placeholder="Enter amount" step="0.01" class="vaildationInputs">
+        <br>
+        <div id="selections">
+            <label for="from">From:</label>
+            <select id="from">
+                <!-- Add currency options as needed -->
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+                <option value="SAR">SAR</option> <!-- Saudi Riyal -->
+                <option value="AED">AED</option> <!-- United Arab Emirates Dirham -->
+                <option value="EGP">EGP</option> <!-- Egyptian Pound -->
+                <!-- Add more Islamic currencies as needed -->
+            </select>
+            <br>
+            <label for="to">To:</label>
+            <select id="to">
+                <!-- Add currency options as needed -->
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+                <option value="SAR">SAR</option> <!-- Saudi Riyal -->
+                <option value="AED">AED</option> <!-- United Arab Emirates Dirham -->
+                <option value="EGP">EGP</option> <!-- Egyptian Pound -->
+                <!-- Add more Islamic currencies as needed -->
+            </select>
+        </div>
+        <br>
+        <button onclick="convert()" class="validationButton">Convert</button>
+        <br>
+        <h2 id="currencyResult"></h2>
+        <button onclick="closePopup('converter')" class="popupclose closwButton" >Close</button>
+    </div>
+
     <div id="overlay" class="overlay"></div>
     
     <script src="JS/validations.js"></script>
@@ -168,5 +207,6 @@
     <script src="JS/memorygame.js"></script>
     <script src="JS/weather.js"></script>
     <script src="JS/xo.js"></script>
+    <script src="JS/currency.js"></script>
 </body>
 </html>
