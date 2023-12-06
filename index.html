@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="CSS/todo.css">
     <link rel="stylesheet" href="CSS/memorygame.css">
     <link rel="stylesheet" href="CSS/wheather.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="CSS/xo.css">
+    <title>JavaScript Tasks</title>
 </head>
 <body>
     <hr> <br>
@@ -23,6 +24,7 @@
         <button onclick="openPopup('todo-container')" class="containersButtons">To Do List</button>
         <button onclick="openPopup('clock-container')" class="containersButtons">Digital Clock</button>
         <button onclick="openPopup('memorygame')" class="containersButtons">Memory Game</button>
+        <button onclick="openPopup('xogamecontainer')" class="containersButtons">XO Game</button>
         <button onclick="openPopup('wheather')" class="containersButtons">Wheather App</button>
     <hr> <br>
 
@@ -148,6 +150,14 @@
         <button onclick="closePopup('wheather')" class="popupclose closwButton" >Close</button>
     </div>
 
+    <div id="xogamecontainer" class="popup">
+        <h2>XO Game</h2>
+        <p id="message"></p>
+        <div id="board"></div>
+        <button id="restartButton" onclick="restartGame()" class="validationButton">Restart</button>
+        <button onclick="closePopup('xogamecontainer')" class="popupclose closwButton" >Close</button>
+    </div>
+
     <div id="overlay" class="overlay"></div>
     
     <script src="JS/validations.js"></script>
@@ -157,5 +167,6 @@
     <script src="JS/clock.js"></script>
     <script src="JS/memorygame.js"></script>
     <script src="JS/weather.js"></script>
+    <script src="JS/xo.js"></script>
 </body>
 </html>
